@@ -178,6 +178,8 @@
  *  隐藏按钮
  */
 - (void)hidenButtons {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"dismiss_pop_notification"
+                                                            object:nil];
     NSArray *items = [self menuItems];
     
     for (int index = 0; index < items.count; index ++) {
